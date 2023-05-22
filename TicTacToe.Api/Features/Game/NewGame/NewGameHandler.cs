@@ -3,14 +3,14 @@ using TicTacToe.App;
 
 namespace TicTacToe.Api.Features.Game.NewGame
 {
-    public class NewGameHandler : IRequestHandler<NewGameRequest, NewGameResponse>
+    public class NewGameHandler : IRequestHandler<NewGameCommand, NewGameResponse>
     {
         private readonly IGameService _gameService;
         public NewGameHandler(IGameService gameService)
         {
             _gameService = gameService;
         }
-        public async Task<NewGameResponse> Handle(NewGameRequest request, CancellationToken cancellationToken)
+        public async Task<NewGameResponse> Handle(NewGameCommand request, CancellationToken cancellationToken)
         {
             var result = await _gameService.NewGame();
             var response = new NewGameResponse

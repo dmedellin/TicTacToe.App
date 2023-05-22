@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Api.Features.Game.GetGame;
+using TicTacToe.Api.Features.Game.MakeMove;
 using TicTacToe.Api.Features.Game.NewGame;
 
 namespace TicTacToe.Api.Controllers
@@ -16,10 +17,10 @@ namespace TicTacToe.Api.Controllers
             _logger = logger;
             _mediator = mediator;
         }
-        [HttpGet(Name = "StartGame")]
+        [HttpPost(Name = "StartGame")]
         public async Task<ActionResult<NewGameResponse>> StartGame()
         {
-            var request = new NewGameRequest();
+            var request = new NewGameCommand();
             var game = await _mediator.Send(request);
 
             if (game == null)
@@ -29,18 +30,26 @@ namespace TicTacToe.Api.Controllers
 
             return Ok(game);
         }
-        //[HttpGet(Name = "GetGame")]
-        //public async Task<ActionResult<GetGameResponse>> GetGame(Guid id)
-        //{
-        //    var request = new GetGameQuery(id);
-        //    var game = await _mediator.Send(request);
+        [HttpGet("{id}",Name = "GetGame")]
+        public async Task<ActionResult<GetGameResponse>> GetGame(Guid id)
+        {
+            var request = new GetGameQuery(id);
+            var game = await _mediator.Send(request);
 
-        //    if (game == null)
-        //    {
-        //        return NotFound();
-        //    }
+            if (game == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(game);
-        //}
+            return Ok(game);
+        }
+
+        [HttpPost("{id}/move")]
+        public async Task<IActionResult> MakeMove(Guid id, [FromBody] MakeMoveCommand command)
+        {
+            command.GameId = id;
+            await _mediator.Send(command);
+            return NoContent();
+        }
     }
 }

@@ -3,20 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.App", "TicTacToe.App\TicTacToe.App.csproj", "{32AF6DEF-16F5-4FA6-B948-C962A4B35D8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.App", "TicTacToe.App\TicTacToe.App.csproj", "{32AF6DEF-16F5-4FA6-B948-C962A4B35D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.AppTest", "TicTacToe.AppTest\TicTacToe.AppTest.csproj", "{B15882BC-C15B-46B0-A88B-7E6F3D14FC65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.AppTest", "TicTacToe.AppTest\TicTacToe.AppTest.csproj", "{B15882BC-C15B-46B0-A88B-7E6F3D14FC65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Model", "TicTacToe.Model\TicTacToe.Model.csproj", "{200D60D6-8DF5-4F35-BDCD-C659FA45727A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Model", "TicTacToe.Model\TicTacToe.Model.csproj", "{200D60D6-8DF5-4F35-BDCD-C659FA45727A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Infrastructure", "TicTacToe.Infrastructure\TicTacToe.Infrastructure.csproj", "{6D64F601-6FBA-4CCA-84AB-490295C6C54A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Infrastructure", "TicTacToe.Infrastructure\TicTacToe.Infrastructure.csproj", "{6D64F601-6FBA-4CCA-84AB-490295C6C54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Api", "TicTacToe.Api\TicTacToe.Api.csproj", "{2B5627A8-5156-4B82-A781-7EC54F92F32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Api", "TicTacToe.Api\TicTacToe.Api.csproj", "{2B5627A8-5156-4B82-A781-7EC54F92F32C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{584278DE-8A52-4D9F-ADF2-F80C8FD77506}"
 	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
 		Components\statestore.yaml = Components\statestore.yaml
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7C679DA2-B81B-42A7-8474-6D176F0FDAD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,10 @@ Global
 		{2B5627A8-5156-4B82-A781-7EC54F92F32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B5627A8-5156-4B82-A781-7EC54F92F32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B5627A8-5156-4B82-A781-7EC54F92F32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C679DA2-B81B-42A7-8474-6D176F0FDAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C679DA2-B81B-42A7-8474-6D176F0FDAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C679DA2-B81B-42A7-8474-6D176F0FDAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C679DA2-B81B-42A7-8474-6D176F0FDAD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

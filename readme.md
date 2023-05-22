@@ -1,0 +1,1 @@
+dapr run --app-id myapp --app-port 5000 --dapr-http-port 3500 --components-path ../Components dotnet run

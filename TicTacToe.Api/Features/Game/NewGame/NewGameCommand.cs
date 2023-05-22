@@ -2,7 +2,7 @@
 
 namespace TicTacToe.Api.Features.Game.NewGame
 {
-    public class NewGameRequest : IRequest<NewGameResponse>
+    public class NewGameCommand : IRequest<NewGameResponse>
     {
 
     }

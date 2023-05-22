@@ -1,0 +1,18 @@
+﻿
+
+@baseUrl = https://localhost:52794
+@id = 85cdafb1-fa4e-472e-99e2-7bc5027ee517
+POST {{baseUrl}}/Game/
+###
+
+POST {{baseUrl}}/Game/{{id}}/move
+Content-Type: application/json
+
+{
+  "gameId": "{{id}}",
+  "player": 1,
+  "position": 1
+}
+
+###
+GET {{baseUrl}}/Game/{{id}}/
